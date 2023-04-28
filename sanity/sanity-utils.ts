@@ -5,7 +5,7 @@ import { Page } from "@/types/Page";
 
 
 export async function getProjects(): Promise<Project[]> {
-	return await createClient(clientConfig).fetch(
+	return createClient(clientConfig).fetch(
 		groq`*[_type == "project"]{
 			_id,
 			_createdAt,
