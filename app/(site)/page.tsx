@@ -5,6 +5,10 @@ import Link from "next/link";
 export default async function Home() {
   const projects = await getProjects();
 
+  if (projects == null) {
+    return <></>;
+  }
+
   return (
     <div>
       <h1 className="text-7xl front-exrabold">
