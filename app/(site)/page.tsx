@@ -14,18 +14,20 @@ export default async function Home() {
   return (
     <div>
       <h1 className="text-7xl front-exrabold">
-        Hello I&apos;m{" "}
+        {/* Hello I&apos;m{" "} */}
+        大家好~我们是
         <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
-          George
+          {/* George */}了了和星星
         </span>
         !
       </h1>
 
       <p className="mt-3 text-xl text-gray-600">
-        Aloha everyone! Checkout my projects!
+        {/* Aloha everyone! Checkout my projects! */}
+        欢迎来到我们的2.5次元～
       </p>
 
-      <h2 className="mt-24 font-bold text-gray-700 text-3xl">My Projects</h2>
+      <h2 className="mt-24 font-bold text-gray-700 text-3xl">一些可可爱爱</h2>
 
       <div className="mt-5 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {projects.map((project) => (
