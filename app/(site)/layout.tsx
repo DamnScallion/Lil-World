@@ -18,11 +18,11 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className="max-w-[1300px] mx-auto px-1 sm:px-2 md:px-6 lg:px-8 py-6">
-        <header className="mx-2 sm:mx-4 md:mx-6 lg:mx-8 flex items-center justify-between py-4">
+      <body className="max-w-[1300px] mx-auto px-1 sm:px-2 md:px-6 lg:px-8 py-0">
+        <header className="mx-0 sm:mx-4 md:mx-6 lg:mx-8 px-1 sm:px-2 md:px-6 lg:px-8 flex items-center justify-between py-4">
           <Link
             href="/"
-            className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-lg font-bold"
+            className="text-gray-500 text-lg font-semibold transition-all flex items-center gap-1 hover:text-orange-500 group"
           >
             次元封面
           </Link>
@@ -38,7 +38,7 @@ export default async function RootLayout({
             ))}
           </div>
         </header>
-        <main className="mx-0 sm:mx-4 md:mx-6 lg:mx-8 py-6">{children}</main>
+        <main className="mx-0 sm:mx-4 md:mx-6 lg:mx-8 pb-6">{children}</main>
       </body>
     </html>
   );

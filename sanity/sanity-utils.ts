@@ -25,6 +25,7 @@ export async function getProject(slug: string): Promise<Project> {
 		groq`*[_type == "project" && slug.current == $slug][0]{
 			_id,
 			_createdAt,
+      createdAt,
 			name,
 			"slug": slug.current,
 			"image": image.asset->url,
