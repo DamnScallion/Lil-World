@@ -16,7 +16,7 @@ const project = {
 		},
 		{
 			name: 'image',
-			title: 'Image',
+			title: 'Cover',
 			type: 'image',
 			options: { hotspot: true },
 			fields: [
@@ -26,7 +26,23 @@ const project = {
 					type: 'string'
 				}
 			]
-		},
+    },
+    {
+      name: "images",
+      title: "Images",
+      type: "array",
+      of: [{ 
+        type: "image",
+        options: { hotspot: true },
+        fields: [
+          {
+            name: "alt",
+            title: "Alt",
+            type: "string"
+          }
+        ]
+      }]
+    },
 		{
 			name: 'url',
 			title: 'Url',

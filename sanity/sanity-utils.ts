@@ -19,22 +19,23 @@ export async function getProjects(): Promise<Project[]> {
   );
 }
 
-
 export async function getProject(slug: string): Promise<Project> {
-	return createClient(clientConfig).fetch(
-		groq`*[_type == "project" && slug.current == $slug][0]{
-			_id,
-			_createdAt,
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "project" && slug.current == $slug][0]{
+      _id,
+      _createdAt,
       createdAt,
-			name,
-			"slug": slug.current,
-			"image": image.asset->url,
-			url,
-			content
-		}`,
-		{ slug }
-	)
+      name,
+      "slug": slug.current,
+      "image": image.asset->url,
+      "images": images[].asset->url, // 🔥 Updated to fetch all images
+      url,
+      content
+    }`,
+    { slug }
+  );
 }
+
 
 export async function getPages(): Promise<Page[]> {
 	return createClient(clientConfig).fetch(

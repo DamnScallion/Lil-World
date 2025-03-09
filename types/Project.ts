@@ -7,6 +7,7 @@ export type Project = {
   name: string;
   slug: string;
   image: string;
+  images: string[]; // 🔥 Updated: Now supports multiple images
   url: string;
   content: PortableTextBlock[];
 };

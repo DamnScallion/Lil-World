@@ -3,25 +3,38 @@
 @tailwind utilities;
 
 .father::-webkit-scrollbar {
- 	width: 6px;
- 	height: 6px;
- 	/**/
+  width: 6px;
+  height: 6px;
+  /**/
 }
 
 .father::-webkit-scrollbar-track {
- 	background: rgb(239, 239, 239);
- 	border-radius: 2px;
+  background: rgb(239, 239, 239);
+  border-radius: 2px;
 }
 
 .father::-webkit-scrollbar-thumb {
- 	background: #bfbfbf;
- 	border-radius: 6px;
+  background: #bfbfbf;
+  border-radius: 6px;
 }
 
 .father::-webkit-scrollbar-thumb:hover {
- 	background: #333;
+  background: #333;
 }
 
 /* .father::-webkit-scrollbar-corner {
  	background: #179a16;
 } */
+
+:root {
+  --swiper-navigation-color: #000;
+  --swiper-pagination-color: #000;
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-height: 8px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bullet-vertical-gap: 6px;
+}
