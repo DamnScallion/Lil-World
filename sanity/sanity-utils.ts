@@ -5,18 +5,20 @@ import { Page } from "@/types/Page";
 
 
 export async function getProjects(): Promise<Project[]> {
-	return createClient(clientConfig).fetch(
-		groq`*[_type == "project"]{
-			_id,
-			_createdAt,
-			name,
-			"slug": slug.current,
-			"image": image.asset->url,
-			url,
-			content
-		}`
-	)
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "project"] | order(createdAt asc) {
+      _id,
+      _createdAt,
+      createdAt,  // ✅ Fetching the custom createdAt field
+      name,
+      "slug": slug.current,
+      "image": image.asset->url,
+      url,
+      content
+    }`
+  );
 }
+
 
 export async function getProject(slug: string): Promise<Project> {
 	return createClient(clientConfig).fetch(

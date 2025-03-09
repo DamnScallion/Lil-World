@@ -18,15 +18,15 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className="max-w-6xl mx-auto py-10, father">
-        <header className="mx-5 flex items-center justify-between">
+      <body className="max-w-[1300px] mx-auto px-1 sm:px-2 md:px-6 lg:px-8 py-6">
+        <header className="mx-2 sm:mx-4 md:mx-6 lg:mx-8 flex items-center justify-between py-4">
           <Link
             href="/"
             className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-lg font-bold"
           >
             次元封面
           </Link>
-          <div className="flex items-center gap-5 text-sm text-gray-600">
+          <div className="flex items-center gap-3 sm:gap-5 text-sm text-gray-600">
             {pages.map((page) => (
               <Link
                 key={page._id}
@@ -38,7 +38,7 @@ export default async function RootLayout({
             ))}
           </div>
         </header>
-        <main className="mx-5 py-10">{children}</main>
+        <main className="mx-0 sm:mx-4 md:mx-6 lg:mx-8 py-6">{children}</main>
       </body>
     </html>
   );

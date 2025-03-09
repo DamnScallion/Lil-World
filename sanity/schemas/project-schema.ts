@@ -37,7 +37,13 @@ const project = {
 			title: 'Content',
 			type: 'array',
 			of: [{ type: 'block' }]
-		}
+    },
+    {
+      name: "createdAt",
+      title: "Created At",
+      type: "datetime",
+      initialValue: () => new Date().toISOString(), 
+    },
 	]
 }
 
