@@ -30,13 +30,14 @@ export default function Project() {
 
   const createdAt = project.createdAt
     ? new Date(project.createdAt).toLocaleString("zh-CN", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: false,
-      })
+      timeZone: "Australia/Sydney", // 🔥 Ensures it follows Sydney time
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    })
     : "N/A";
 
   return (
@@ -62,7 +63,7 @@ export default function Project() {
       </Swiper>
 
       {/* Project Info */}
-      <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-3">
+      <h1 className="text-xl md:text-2xl font-medium text-gray-900 mb-3">
         {project.name}
       </h1>
       <p className="text-sm text-gray-500 mb-6">发布于 {createdAt}</p>

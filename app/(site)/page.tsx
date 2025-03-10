@@ -11,7 +11,7 @@ export default async function Home() {
 
   return (
     <div className="px-1 sm:px-2 md:px-6 lg:px-8 py-6 max-w-[1300px] mx-auto">
-      <h1 className="text-4xl md:text-6xl font-extrabold text-center mb-6">
+      <h1 className="text-4xl md:text-6xl font-semibold text-center mb-6">
         我们是~
         <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
           了了和星星
@@ -29,16 +29,15 @@ export default async function Home() {
 
           const createdAt = project.createdAt
             ? new Date(project.createdAt).toLocaleString("zh-CN", {
+              timeZone: "Australia/Sydney", // 🔥 Ensures it follows Sydney time
               year: "numeric",
               month: "long",
               day: "numeric",
               hour: "2-digit",
               minute: "2-digit",
-              // second: "2-digit",
               hour12: false,
             })
             : "N/A";
-
 
           return (
             <Link
@@ -58,7 +57,7 @@ export default async function Home() {
                 </div>
               )}
               <div className="p-3">
-                <h3 className="text-md md:text-lg font-bold text-gray-800">
+                <h3 className="text-md md:text-lg font-medium text-gray-800">
                   {project.name}
                 </h3>
                 <p className="text-sm text-gray-500 mt-1">{createdAt}</p>
